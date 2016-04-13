@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+        <title> Gráfico de Barras </title> 
+        <!-- Inclusões das bibliotecas JavaScript para o Highcharts
+ --> 
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> 
+        <script src="http://code.highcharts.com/highcharts.js"></script>     
+    </head> 
+    <body> 
+    <script> 
+ 	$(function () {  
+       $('#container').highcharts({
+       		chart: { 
+						type: 'column' 
+				  }, 
+			title: { 
+						 text: 'Cinema' 
+			}, 
+			xAxis: { 
+						 categories: ['Worldwide', 'Domestic', 'Brazil','Argentina'] 
+			}, 
+			yAxis: { 
+						 title: { 
+								text: 'Arrecadacao' 
+						  } 
+			}, 
+			series: [{ 
+				name: 'Titanic', 
+				data: [2186772302, 658672302, 70460123, 23269046] 
+				}, 
+				{ 
+					name: 'Avatar', 
+					data: [949849300, 23423400, 23423234, 23423400]
+				},
+				{
+					name:'Homem-Aranha',
+					data: [10030,828,239,220] 
+				},
+				{ 
+					name: 'Avengers', 
+					data: [48789789, 4789789789, 2789789789, 2789789789]
+				},
+				] 
+				
+       		});
+       		
+       		$('#container2').highcharts({
+       		chart: { 
+						type: 'column' 
+				  }, 
+			title: { 
+						 text: 'Cinema Semana de Estreia' 
+			}, 
+			xAxis: { 
+						 categories: ['Worldwide', 'Domestic', 'Brazil','Argentina'] 
+			}, 
+			yAxis: { 
+						 title: { 
+								text: 'Arrecadacao' 
+						  } 
+			}, 
+			series: [{ 
+				name: 'Titanic', 
+				data: [2180078976787867, 65862789789789, 7041237899, 232690468989] 
+				}, 
+				{ 
+					name: 'Avatar', 
+					data: [4789789678, 4789789678, 2789789978678, 2789789798]
+				},
+				{
+					name:'Homem-Aranha',
+					data: [5789789678,7789789,789789,2789789789] 
+				},
+				{ 
+					name: 'Avengers', 
+					data: [4789789678678, 4789789678, 2789798678, 27897899]
+				},
+				] 
+				
+       		});
+     });
+</script>
+    <div id="container" style="width:100%; height:400px;"></div>
+    <div id="container2" style="width:100%; height:400px;"></div>
+    </body> 
+</html>
