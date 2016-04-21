@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title> Gráfico de Barras </title>
+        <!-- Inclusões das bibliotecas JavaScript para o Highcharts
+ -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+    </head>
+    <body>
+    <script>
+ 	$(function () {
+       $('#worldwide').highcharts({
+       		chart: {
+						type: 'line'
+				  },
+			title: {
+						 text: 'Arrecadação Mundial'
+			},
+
+			xAxis: {
+						 categories: ['Avatar', 'Spide-Man 3', 'Tranformers: Revenge of the Falen','X-Men: Origens','X-Men: First Class', 'The Book of Eli', 'Star Wars: The Clone Wars']
+			},
+			yAxis: {
+						 title: {
+								text: 'Worldwide Gross M'
+						  }
+			},
+			series: [{
+				name: 'Worldwide' ,
+				data: [2784, 891, 836, 373,354,153,68]
+				}]
+       		});
+     });
+
+ 	$(function () {
+       $('#domestic').highcharts({
+       		chart: {
+						type: 'line'
+
+
+				  },
+			title: {
+						 text: 'Arrecadação Doméstica'
+			},
+
+
+			xAxis: {
+						 categories: ['Avatar', 'Spide-Man 3', 'Tranformers: Revenge of the Falen','X-Men: Origens','X-Men: First Class', 'The Book of Eli', 'Star Wars: The Clone Wars']
+			},
+			yAxis: {
+						 title: {
+								text: 'Worldwide Gross M'
+						  }
+			},
+			series: [{
+				name: 'Domestic' ,
+				data: [760.5, 336.5, 402.1, 179.1,146.4,94.8,35.2],
+				color: Highcharts.getOptions().colors[5]
+				}]
+       		});
+     });
+
+ 	$(function () {
+       $('#genero').highcharts({
+       		chart: {
+						type: 'column'
+
+
+				  },
+			title: {
+						 text: 'Generos Premiados'
+			},
+
+
+			xAxis: {
+						 categories: ['Adventure', 'Animation', 'Biography','Comedy','Crime', 'Drama', 'Romance','Thriller']
+			},
+			yAxis: {
+						 title: {
+								text: 'Sum of Premios'
+						  }
+			},
+			series: [{
+				name: 'Genre:' ,
+				data: [2, 6, 7, 3,6,21,1,4],
+				color: Highcharts.getOptions().colors[0]
+				}]
+       		});
+     });
+
+</script>
+    <div id="worldwide" style="width:100%; height:400px;"></div>
+    <div id="domestic" style="width:100%; height:400px;"></div>
+    <div id="genero" style="width:100%; height:400px;"></div>
+    <div id="textDiv"></div>
+    <script type="text/javascript">
+    var div = document.getElementById("textDiv");
+    div.textContent = "Uma das maiores dificuldades encontradas foi carregar os dados. Eu gostaria de ler o arquivo csv e alimentar meu gráfico, mas não sei como fazer isso. Outra foi colocar labels nas colunas para informar a quantidade exata.";
+    var text = div.textContent;
+</script>
+    <div id="" style="width:100%; height:400px;"></div>
+    </body>
+</html>
